@@ -1,0 +1,565 @@
+upnpc : miniupnpc library test client, version 2.0.
+ (c) 2005-2016 Thomas Bernard.
+Go to http://miniupnp.free.fr/ or http://miniupnp.tuxfamily.org/
+for more information.
+Sending M-SEARCH request to 239.255.255.250 with ST: urn:schemas-upnp-org:device:InternetGatewayDevice:1
+M-SEARCH Reply:
+  ST: urn:schemas-upnp-org:device:InternetGatewayDevice:1
+  USN: uuid:12342409-1234-1234-5678-ee1234cc5678::urn:schemas-upnp-org:device:InternetGatewayDevice:1
+  Location: http://192.168.2.1:52869/picsdesc.xml
+NODATA or TIMEOUT
+List of UPNP devices found on the network :
+ desc: http://192.168.2.1:52869/picsdesc.xml
+ st: urn:schemas-upnp-org:device:InternetGatewayDevice:1
+
+parsed url : hostname='192.168.2.1' port=52869 path='/picsdesc.xml' scope_id=0
+address miniwget : 192.168.2.108
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='2801'
+Content-Length: 2801
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+urlbase = ''
+WAN Device (Common interface config) :
+ serviceType = 'urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1'
+ controlURL = '/upnp/control/WANCommonInterfaceConfig'
+ eventSubURL = '/upnp/event/WANCommonInterfaceConfig'
+ SCPDURL = '/wancfg.xml'
+primary WAN Connection Device (IP or PPP Connection):
+ servicetype = 'urn:schemas-upnp-org:service:WANIPConnection:1'
+ controlURL = '/upnp/control/WANIPConnection'
+ eventSubURL = '/upnp/event/WANIPConnection'
+ SCPDURL = '/wanipcn.xml'
+secondary WAN Connection Device (IP or PPP Connection):
+ servicetype = ''
+ controlURL = ''
+ eventSubURL = ''
+ SCPDURL = ''
+WAN IPv6 Firewall Control :
+ servicetype = ''
+ controlURL = ''
+ eventSubURL = ''
+ SCPDURL = ''
+urlbase = ''
+WAN Device (Common interface config) :
+ serviceType = 'urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1'
+ controlURL = '/upnp/control/WANCommonInterfaceConfig'
+ eventSubURL = '/upnp/event/WANCommonInterfaceConfig'
+ SCPDURL = '/wancfg.xml'
+primary WAN Connection Device (IP or PPP Connection):
+ servicetype = 'urn:schemas-upnp-org:service:WANIPConnection:1'
+ controlURL = '/upnp/control/WANIPConnection'
+ eventSubURL = '/upnp/event/WANIPConnection'
+ SCPDURL = '/wanipcn.xml'
+secondary WAN Connection Device (IP or PPP Connection):
+ servicetype = ''
+ controlURL = ''
+ eventSubURL = ''
+ SCPDURL = ''
+WAN IPv6 Firewall Control :
+ servicetype = ''
+ controlURL = ''
+ eventSubURL = ''
+ SCPDURL = ''
+urls->ipcondescURL='http://192.168.2.1:52869/wanipcn.xml'
+urls->controlURL='http://192.168.2.1:52869/upnp/control/WANIPConnection'
+urls->controlURL_CIF='http://192.168.2.1:52869/upnp/control/WANCommonInterfaceConfig'
+urls->controlURL_6FC='http://192.168.2.1:52869/'
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetStatusInfo" - Content-Length: 271
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 271
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetStatusInfo"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetStatusInfo xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"></u:GetStatusInfo></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='427'
+Content-Length: 427
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetStatusInfoResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewConnectionStatus>Connected</NewConnectionStatus><NewLastConnectionError>ERROR_NONE</NewLastConnectionError><NewUptime>146889661</NewUptime></u:GetStatusInfoResponse></s:Body></s:Envelope>
+UPNPIGD_IsConnected(http://192.168.2.1:52869/upnp/control/WANIPConnection) = 1
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetExternalIPAddress" - Content-Length: 285
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 285
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetExternalIPAddress"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetExternalIPAddress xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"></u:GetExternalIPAddress></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='355'
+Content-Length: 355
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetExternalIPAddressResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewExternalIPAddress>1.192.170.69</NewExternalIPAddress></u:GetExternalIPAddressResponse></s:Body></s:Envelope>
+Found valid IGD : http://192.168.2.1:52869/upnp/control/WANIPConnection
+Local LAN ip address : 192.168.2.108
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetConnectionTypeInfo" - Content-Length: 287
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 287
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetConnectionTypeInfo"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetConnectionTypeInfo xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"></u:GetConnectionTypeInfo></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='414'
+Content-Length: 414
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetConnectionTypeInfoResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewConnectionType>IP_Routed</NewConnectionType><NewPossibleConnectionTypes>IP_Routed</NewPossibleConnectionTypes></u:GetConnectionTypeInfoResponse></s:Body></s:Envelope>
+Connection Type : IP_Routed
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetStatusInfo" - Content-Length: 271
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 271
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetStatusInfo"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetStatusInfo xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"></u:GetStatusInfo></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='427'
+Content-Length: 427
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetStatusInfoResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewConnectionStatus>Connected</NewConnectionStatus><NewLastConnectionError>ERROR_NONE</NewLastConnectionError><NewUptime>146889661</NewUptime></u:GetStatusInfoResponse></s:Body></s:Envelope>
+Status : Connected, uptime=146889661s, LastConnectionError : ERROR_NONE
+  Time started : Thu Oct 20 15:42:38 2011
+SOAP request : POST /upnp/control/WANCommonInterfaceConfig HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetCommonLinkProperties" - Content-Length: 300
+Headers :
+POST /upnp/control/WANCommonInterfaceConfig HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 300
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetCommonLinkProperties"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetCommonLinkProperties xmlns:u="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1"></u:GetCommonLinkProperties></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='544'
+Content-Length: 544
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetCommonLinkPropertiesResponse xmlns:u="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1"><NewWANAccessType>Cable</NewWANAccessType><NewLayer1UpstreamMaxBitRate>100000000</NewLayer1UpstreamMaxBitRate><NewLayer1DownstreamMaxBitRate>100000000</NewLayer1DownstreamMaxBitRate><NewPhysicalLinkStatus>Up</NewPhysicalLinkStatus></u:GetCommonLinkPropertiesResponse></s:Body></s:Envelope>
+MaxBitRateDown : 100000000 bps (100.0 Mbps)   MaxBitRateUp 100000000 bps (100.0 Mbps)
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetExternalIPAddress" - Content-Length: 285
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 285
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetExternalIPAddress"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetExternalIPAddress xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"></u:GetExternalIPAddress></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='355'
+Content-Length: 355
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetExternalIPAddressResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewExternalIPAddress>1.192.170.69</NewExternalIPAddress></u:GetExternalIPAddressResponse></s:Body></s:Envelope>
+ExternalIPAddress = 1.192.170.69
+ i protocol exPort->inAddr:inPort description remoteHost leaseTime
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>0</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='631'
+Content-Length: 631
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>30528</NewExternalPort><NewProtocol>UDP</NewProtocol><NewInternalPort>30528</NewInternalPort><NewInternalClient>192.168.2.106</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 0 UDP 30528->192.168.2.106:30528 'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>1</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='631'
+Content-Length: 631
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>30528</NewExternalPort><NewProtocol>TCP</NewProtocol><NewInternalPort>30528</NewInternalPort><NewInternalClient>192.168.2.106</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 1 TCP 30528->192.168.2.106:30528 'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>2</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='631'
+Content-Length: 631
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>55079</NewExternalPort><NewProtocol>UDP</NewProtocol><NewInternalPort>55079</NewInternalPort><NewInternalClient>192.168.2.108</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 2 UDP 55079->192.168.2.108:55079 'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>3</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='631'
+Content-Length: 631
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>55079</NewExternalPort><NewProtocol>TCP</NewProtocol><NewInternalPort>55079</NewInternalPort><NewInternalClient>192.168.2.108</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 3 TCP 55079->192.168.2.108:55079 'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>4</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='631'
+Content-Length: 631
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>30280</NewExternalPort><NewProtocol>UDP</NewProtocol><NewInternalPort>30280</NewInternalPort><NewInternalClient>192.168.2.101</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 4 UDP 30280->192.168.2.101:30280 'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>5</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='631'
+Content-Length: 631
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>30280</NewExternalPort><NewProtocol>TCP</NewProtocol><NewInternalPort>30280</NewInternalPort><NewInternalClient>192.168.2.101</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 5 TCP 30280->192.168.2.101:30280 'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>6</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='631'
+Content-Length: 631
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>14012</NewExternalPort><NewProtocol>UDP</NewProtocol><NewInternalPort>14012</NewInternalPort><NewInternalClient>192.168.2.100</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 6 UDP 14012->192.168.2.100:14012 'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>7</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='631'
+Content-Length: 631
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>14012</NewExternalPort><NewProtocol>TCP</NewProtocol><NewInternalPort>14012</NewInternalPort><NewInternalClient>192.168.2.100</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 7 TCP 14012->192.168.2.100:14012 'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>8</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='629'
+Content-Length: 629
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>4466</NewExternalPort><NewProtocol>UDP</NewProtocol><NewInternalPort>4466</NewInternalPort><NewInternalClient>192.168.2.104</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 8 UDP  4466->192.168.2.104:4466  'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 341
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 341
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>9</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 200, Reason phrase = OK
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='629'
+Content-Length: 629
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 200 SOAP Response :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntryResponse xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewRemoteHost></NewRemoteHost><NewExternalPort>4466</NewExternalPort><NewProtocol>TCP</NewProtocol><NewInternalPort>4468</NewInternalPort><NewInternalClient>192.168.2.104</NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>miniupnpd</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:GetGenericPortMappingEntryResponse></s:Body></s:Envelope>
+ 9 TCP  4466->192.168.2.104:4468  'miniupnpd' '' 0
+SOAP request : POST /upnp/control/WANIPConnection HTTP/1.1 - Host: 192.168.2.1:52869
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry" - Content-Length: 342
+Headers :
+POST /upnp/control/WANIPConnection HTTP/1.1
+Host: 192.168.2.1:52869
+User-Agent: Darwin/15.4.0, UPnP/1.1, MiniUPnPc/2.0
+Content-Length: 342
+Content-Type: text/xml
+SOAPAction: "urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"
+Connection: Close
+Cache-Control: no-cache
+Pragma: no-cache
+
+Body :
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetGenericPortMappingEntry xmlns:u="urn:schemas-upnp-org:service:WANIPConnection:1"><NewPortMappingIndex>10</NewPortMappingIndex></u:GetGenericPortMappingEntry></s:Body></s:Envelope>
+
+HTTP status code = 500, Reason phrase = Internal Server Error
+header='Content-Type', value='text/xml; charset="utf-8"'
+header='Connection', value='close'
+header='Content-Length', value='410'
+Content-Length: 410
+header='Server', value='miniupnpd/1.0 UPnP/1.0'
+header='Ext', value=''
+End of HTTP content
+HTTP 500 SOAP Response :
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><s:Fault><faultcode>s:Client</faultcode><faultstring>UPnPError</faultstring><detail><UPnPError xmlns="urn:schemas-upnp-org:control-1-0"><errorCode>713</errorCode><errorDescription>SpecifiedArrayIndexInvalid</errorDescription></UPnPError></detail></s:Fault></s:Body></s:Envelope>
+GetGenericPortMappingEntry() returned 713 (SpecifiedArrayIndexInvalid)
